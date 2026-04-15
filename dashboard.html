@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chess Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="dashboard">
+  <div class="container card">
+    <h1>Dashboard</h1>
+    <p id="welcomeText">Welcome!</p>
+    <div class="menu-grid">
+      <button type="button" id="startGameBtn">Start Game</button>
+      <button id="statsBtn">View Stats</button>
+      <button id="settingsBtn">Settings</button>
+      <button id="instructionsBtn">Instructions</button>
+      <button id="logoutBtn" class="danger">Logout</button>
+    </div>
+    <p id="message" class="message"></p>
+  </div>
+  
+  <div id="sideOptionsModal" class="modal hidden" onclick="if(event.target === this) this.classList.add('hidden')">
+    <div class="modal-card color-modal-card" id="colorModalCard">
+      <button class="close-btn" onclick="document.getElementById('sideOptionsModal').classList.add('hidden')">&times;</button>
+      <h2>Choose Side</h2>
+      <div class="row">
+        <button type="button" id="playWhiteBtn">Play as White</button>
+        <button type="button" id="playBlackBtn" class="secondary">Play as Black</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
